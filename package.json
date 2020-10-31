@@ -1,7 +1,8 @@
 {
-  "name": "Liga-A-start-template",
+  "name": "Bicycle",
   "version": "1.0.0",
-  "description": "Стартовый шаблон сборки Лиги А",
+  "private": true,
+  "description": "Акселератор - Велосипеды",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.x",
     "autoprefixer": "9.5.x",
