@@ -1,0 +1,46 @@
+.form__title {
+  font-size: 17px;
+  line-height: 28px;
+  font-weight: 600;
+  color: $white;
+  text-align: center;
+}
+
+.form input {
+  &::placeholder {
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 400;
+    color: $dark;
+    opacity: 0.5;
+    outline: none;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    border: 2px solid $light-green;
+    outline: none;
+  }
+}
+
+.form button {
+  font-size: 15px;
+  line-height: 21px;
+  font-weight: 600;
+  color: $black;
+  text-align: center;
+
+  background-color: $light-green;
+  border: none;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}

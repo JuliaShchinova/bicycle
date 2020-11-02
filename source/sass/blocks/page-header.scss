@@ -1,0 +1,18 @@
+.page-header {
+  background-color: rgba($black, 0.8);
+}
+
+.page-header__menu a {
+  cursor: pointer;
+}
+
+.page-header__logo-image {
+  &:hover path,
+  &:focus path {
+    fill: $white;
+  }
+
+  &:active path {
+    fill: rgba($light-green, 0.3);
+  }
+}

@@ -5,11 +5,25 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Велосипеды</title>
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/opensans-light-webfont.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensans-regular-webfont.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensans-bold-webfont.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensans-extrabold-webfont.woff2" as="font" crossorigin="anonymous">
 </head>
 <body>
   <header class="page-header">
-    <div class="page-header-menu">
-      <img src="img/logo.svg" width="68" height="20" alt="Логотип компании">
+    <div class="page-header__menu">
+      <a>
+        <svg class="page-header__logo-image" width="68" height="21" viewBox="0 0 68 21" fill="none" aria-label="Логотип Moon" xmlns="http://www.w3.org/2000/svg">
+          <path d="M13.3636 0V20.0455H10.0705V5.82273L8.97273 7.20682L6.825 9.975L6.72954 10.0705L6.58636 9.975L4.43864 7.20682L3.34091 5.775V20.0455H0V0H3.34091L6.72954 4.29545L10.0705 0H13.3636Z" fill="#0AD9C6"></path>
+          <path d="M8.30444 10.0704L8.20898 9.97498L8.30444 10.0704Z" fill="#0AD9C6"></path>
+          <path d="M8.44787 9.97498L8.35241 10.0704H8.30469L8.44787 9.97498Z" fill="#0AD9C6"></path>
+          <path d="M38.2092 5.61453L29.0823 12.316L31.1955 15.194L40.3224 8.49252L38.2092 5.61453Z" fill="#0AD9C6"></path>
+          <path d="M26.6674 3C22.8035 3 19.6243 6.13028 19.6243 10.0431C19.6243 13.9071 22.7546 17.0863 26.6674 17.0863C30.5313 17.0863 33.7105 13.956 33.7105 10.0431C33.7105 6.17919 30.5313 3 26.6674 3ZM26.6674 13.2712C24.8577 13.2712 23.4393 11.8039 23.4393 10.0431C23.4393 8.23344 24.9066 6.81503 26.6674 6.81503C28.4282 6.81503 29.8955 8.28235 29.8955 10.0431C29.8955 11.8039 28.4282 13.2712 26.6674 13.2712Z" fill="#0AD9C6"></path>
+          <path d="M43.6396 3C39.7756 3 36.5964 6.13028 36.5964 10.0431C36.5964 13.9071 39.7267 17.0863 43.6396 17.0863C47.5035 17.0863 50.6827 13.956 50.6827 10.0431C50.6338 6.17919 47.5035 3 43.6396 3ZM43.6396 13.2712C41.8299 13.2712 40.4115 11.8039 40.4115 10.0431C40.4115 8.23344 41.8788 6.81503 43.6396 6.81503C45.4004 6.81503 46.8677 8.28235 46.8677 10.0431C46.8677 11.8039 45.4004 13.2712 43.6396 13.2712Z" fill="#0AD9C6"></path>
+          <path d="M67.5977 0.238647V20.2841H64.2568V9.87956L61.4409 7.20683L59.3409 5.15456V20.2841H56V0.238647H59.2932H59.3409L63.2545 4.0091L64.2568 4.96365V0.238647H67.5977Z" fill="#0AD9C6"></path>
+        </svg>
+      </a>
       <nav class="page-header__nav main-nav">
         <button class="main-nav__toggle main-nav__toggle--open" type="button">
           <span class="visually-hidden">Меню</span>
@@ -31,19 +45,19 @@
       </nav>
     </div>
 
-    <div class="page-header-container">
-      <div class="page-header-information">
-        <h1 class="page-header-information__title">Мы продаем велосипеды</h1>
-        <p class="page-header-information__description">
+    <div class="page-header__container">
+      <div class="page-header__information information">
+        <h1 class="information__title">Мы продаем велосипеды</h1>
+        <p class="information__description">
           Наш магазин отбирает только самые лучшие велосипеды для продажи
         </p>
       </div>
 
-      <div class="page-header-form form">
+      <div class="page-header__form form">
         <h2 class="form__title">Заполните поля ниже и мы подберем велосипед Вашей мечты</h2>
         <form method="POST" action="https://echo.htmlacademy.ru/" enctype="multipart/form-data" autocomplete="off">
-          <input type="text" placeholder="Введите Ваше Имя">
-          <input type="tel" placeholder="Введите Ваш номер телефона" required="">
+          <input type="text" placeholder="Введите Ваше Имя" name="name" id="name">
+          <input type="tel" placeholder="Введите Ваш номер телефона" name="tel" id="tel" required="">
           <button type="submit">Подобрать велосипед мечты</button>
         </form>
       </div>
@@ -51,7 +65,7 @@
   </header>
 
   <main class="page-main">
-    <section class="page-main-advantages advantages" id="advantages">
+    <section class="page-main__advantages advantages" id="advantages">
       <h2 class="advantages__title title">Несколько фактов о нас</h2>
       <ul class="advantages__list">
         <li class="advantages__item">Самый широкий выбор велосипедов!</li>
@@ -61,46 +75,68 @@
       </ul>
     </section>
 
-    <section class="page-main-kinds kinds" id="kinds">
+    <section class="page-main__kinds kinds" id="kinds">
       <h2 class="kinds__title title">Виды велосипедов</h2>
       <ul class="kinds__list">
         <li class="kinds__item">
           <h3>Дорожный велосипед</h3>
-          <img src="#" width="342" height="503" alt="Фотография дорожного велосипеда">
+          <picture>
+            <source media="(max-width: 1023px)" srcset="img/roadbike-tablet@1x.webp 1x, img/roadbike-tablet@2x.webp 2x" type="image/webp">
+            <source media="(min-width: 1024px)" srcset="img/roadbike-desktop@1x.webp 1x, img/roadbike-desktop@2x.webp 2x" type="image/webp">
+            <source media="(max-width: 1023px)" srcset="img/roadbike-tablet@1x.jpg 1x, img/roadbike-tablet@2x.jpg 2x">
+            <img src="img/roadbike-desktop@1x.jpg" srcset="img/roadbike-desktop@2x.jpg 2x" width="342" height="503" alt="Фотография дорожного велосипеда">
+          </picture>
         </li>
 
         <li class="kinds__item">
           <h3>Горный велосипед</h3>
-          <img src="#" width="342" height="566" alt="Фотография горного велосипеда">
+          <picture>
+            <source media="(max-width: 1023px)" srcset="img/mountainbike-tablet@1x.webp 1x, img/mountainbike-tablet@2x.webp 2x" type="image/webp">
+            <source media="(min-width: 1024px)" srcset="img/mountainbike-desktop@1x.webp 1x, img/mountainbike-desktop@2x.webp 2x" type="image/webp">
+            <source media="(max-width: 1023px)" srcset="img/mountainbike-tablet@1x.jpg 1x, img/mountainbike-tablet@2x.jpg 2x">
+            <img src="img/mountainbike-desktop@1x.jpg" srcset="img/mountainbike-desktop@2x.jpg 2x" width="342" height="566" alt="Фотография горного велосипеда">
+          </picture>
         </li>
 
         <li class="kinds__item">
           <h3>Детский велосипед</h3>
-          <img src="#" width="342" height="513" alt="Фотография детского велосипеда">
+          <picture>
+            <source media="(max-width: 1023px)" srcset="img/childbike-tablet@1x.webp 1x, img/childbike-tablet@2x.webp 2x" type="image/webp">
+            <source media="(min-width: 1024px)" srcset="img/childbike-desktop@1x.webp 1x, img/childbike-desktop@2x.webp 2x" type="image/webp">
+            <source media="(max-width: 1023px)" srcset="img/childbike-tablet@1x.jpg 1x, img/childbike-tablet@2x.jpg 2x">
+            <img src="img/childbike-desktop@1x.jpg" srcset="img/childbike-desktop@2x.jpg 2x" width="342" height="513" alt="Фотография детского велосипеда">
+          </picture>
         </li>
       </ul>
     </section>
 
-    <section class="page-main-kinds video" id="video">
+    <section class="page-main__video video" id="video">
       <h2 class="video__title title">Видео про велосипеды</h2>
       <p class="video__description">
         В этом видео мы подробно расскажем про особенности выбора велосипеда для себя.
       </p>
-      <img src="#" width="929" height="522" alt="Видео о велосипедах">
+      <img src="img/videobike-desktop@1x.jpg" srcset="img/videobike-desktop@2x.jpg 2x" width="929" height="522" alt="Видео о велосипедах">
       <button type="button">
         <span class="visually-hidden">Воспроизвести</span>
       </button>
     </section>
+
+    <section class="page-main__contacts contacts" id="contacts">
+      <h2 class="contacts__title title">Как нас найти?</h2>
+      <address>Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19</address>
+      <iframe></iframe>
+    </section>
   </main>
 
-  <footer class="page-footer" id="contacts">
-    <h2 class="page-footer__title title">Как нас найти?</h2>
-    <address>Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19</address>
-    <iframe></iframe>
-    <div>
-      <a class="page-footer__link page-footer__link--mail" href="mailto:puteshestviemechta@gmail.ru">puteshestviemechta@gmail.ru</a>
-      <a class="page-footer__link page-footer__link--phone" href="tel:+749978468446">+7(499)-784-684-46</a>
-    </div>
+  <footer class="page-footer">
+    <ul class="page-footer__list">
+      <li class="page-footer__item page-footer__item--mail">
+        <a href="mailto:puteshestviemechta@gmail.ru">puteshestviemechta@gmail.ru</a>
+      </li>
+      <li class="page-footer__item page-footer__item--phone">
+        <a href="tel:+749978468446">+7(499)-784-684-46</a>
+      </li>
+    </ul>
   </footer>
 </body>
 </html>

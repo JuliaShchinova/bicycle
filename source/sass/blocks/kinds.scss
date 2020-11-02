@@ -1,0 +1,11 @@
+.kinds__list {
+  @include list-reset;
+}
+
+.kinds__item {
+  font-size: 22px;
+  line-height: 34px;
+  font-weight: 600;
+  color: $black;
+  text-align: center;
+}

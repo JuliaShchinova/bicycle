@@ -1,0 +1,33 @@
+.video {
+  background-color: $video-bg;
+
+  button {
+    width: 65px;
+    height: 65px;
+
+    background-color: $light-green;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    border: none;
+
+    &:hover,
+    &:focus {
+      opacity: 0.7;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+}
+
+.video__title {
+  color: $white;
+}
+
+.video__description {
+  text-align: center;
+  color: $white;
+  opacity: 0.7;
+}

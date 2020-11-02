@@ -1,3 +1,16 @@
-h1 {
-  color: red;
-}
+@import "../../node_modules/normalize.css/normalize";
+@import "fonts.scss";
+@import "variables.scss";
+@import "mixins.scss";
+@import "scaffolding.scss";
+@import "blocks/page-header.scss";
+@import "blocks/main-nav.scss";
+@import "blocks/information.scss";
+@import "blocks/form.scss";
+@import "blocks/page-main.scss";
+@import "blocks/advantages.scss";
+@import "blocks/title.scss";
+@import "blocks/kinds.scss";
+@import "blocks/video.scss";
+@import "blocks/contacts.scss";
+@import "blocks/page-footer.scss";
