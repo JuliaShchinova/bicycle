@@ -18,7 +18,7 @@ body {
   line-height: 28px;
   font-weight: 300;
 
-  background-color: $dark-white;
+  background-color: $white;
 }
 
 a {
@@ -62,7 +62,7 @@ img {
   .container {
     &--narrow,
     &--wide {
-      width: 91%;
+      max-width: 100%;
     }
 
     &--noindent {

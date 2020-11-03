@@ -1,4 +1,19 @@
+.form {
+  width: 328px;
+  margin-right: 38px;
+  margin-left: auto;
+  padding-top: 60px;
+
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 .form__title {
+  margin-top: 0;
+  margin-bottom: 20px;
+
   font-size: 17px;
   line-height: 28px;
   font-weight: 600;
@@ -7,6 +22,17 @@
 }
 
 .form input {
+  margin-bottom: 19px;
+  padding-top: 13px;
+  padding-right: 10px;
+  padding-bottom: 12px;
+  padding-left: 30px;
+
+  border: 1px solid $border-form;
+  border-radius: 4px;
+
+  overflow: hidden;
+
   &::placeholder {
     font-size: 15px;
     line-height: 24px;
@@ -19,12 +45,21 @@
   &:hover,
   &:focus,
   &:active {
-    border: 2px solid $light-green;
+    border-color: $light-green;
+    background-color: $border-form;
     outline: none;
   }
 }
 
 .form button {
+  margin-top: 1px;
+  margin-right: 1px;
+  margin-bottom: 20px;
+  padding-top: 16px;
+  padding-bottom: 14px;
+
+  border-radius: 6px;
+
   font-size: 15px;
   line-height: 21px;
   font-weight: 600;
@@ -42,5 +77,56 @@
 
   &:active {
     opacity: 0.3;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .form {
+    width: 321px;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 30px;
+  }
+
+  .form__title {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-size: 18px;
+    color: $black;
+  }
+
+  .form input {
+    padding-top: 11px;
+    padding-bottom: 14px;
+    padding-left: 22px;
+  }
+
+  .form button {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .form {
+    width: 288px;
+  }
+
+  .form__title {
+    margin-bottom: 20px;
+  }
+
+  .form input {
+    padding-top: 12px;
+    padding-bottom: 13px;
+    padding-left: 27px;
+  }
+
+  .form button {
+    margin-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 14px;
+    padding-bottom: 16px;
   }
 }

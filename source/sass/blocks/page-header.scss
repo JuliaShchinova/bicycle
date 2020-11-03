@@ -5,11 +5,18 @@
   background-color: rgba($black, 0.8);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/bg-desktop@2x.jpg");
     background-position: center;
   }
+}
+
+.page-header__container {
+  display: flex;
+  padding-top: 200px;
+  padding-bottom: 215px;
 }
 
 .page-header__menu a {
@@ -18,8 +25,8 @@
 
 .page-header__logo-image {
   position: absolute;
-  top: 200px;
-
+  top: 318px;
+  left: calc(50% - 440px);
 
   &:hover path,
   &:focus path,
@@ -36,6 +43,9 @@
 
 @media (max-width: $tablet-width) {
   .page-header {
+    background-color: $white;
+    background-image: none;
+
     &--nojs,
     &--open {
       .main-nav {
@@ -128,9 +138,43 @@
     top: 25px;
     left: 21px;
   }
+
+  .page-header__container {
+    flex-direction: column;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .page-header__information-container {
+    width: 100%;
+    background-image: url("../img/bg-desktop@1x.jpg");
+    background-color: rgba($black, 0.8);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-desktop@2x.jpg");
+      background-position: center;
+    }
+  }
 }
 
 @media (max-width: $mobile-width) {
+  .page-header__information-container {
+    min-height: 390px;
+
+    background-image: url("../img/bg-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-mobile@2x.jpg");
+      background-position: center;
+    }
+  }
+
   .page-header__logo-image {
     left: 17px;
   }
