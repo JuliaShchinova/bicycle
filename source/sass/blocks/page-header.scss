@@ -1,5 +1,15 @@
 .page-header {
+  position: relative;
+
+  background-image: url("../img/bg-desktop@1x.jpg");
   background-color: rgba($black, 0.8);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/bg-desktop@2x.jpg");
+    background-position: center;
+  }
 }
 
 .page-header__menu a {
@@ -7,12 +17,121 @@
 }
 
 .page-header__logo-image {
+  position: absolute;
+  top: 200px;
+
+
   &:hover path,
-  &:focus path {
+  &:focus path,
+  &:hover rect,
+  &:focus rect {
     fill: $white;
   }
 
-  &:active path {
+  &:active path,
+  &:active rect {
     fill: rgba($light-green, 0.3);
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .page-header {
+    &--nojs,
+    &--open {
+      .main-nav {
+        width: 100%;
+        min-height: 568px;
+
+        background-color: $white;
+      }
+
+      .main-nav__toggle--open {
+        display: none;
+      }
+
+      .main-nav__list {
+        display: flex;
+        flex-direction: column;
+
+        padding-top: 100px;
+      }
+
+      .main-nav__list-item a {
+        display: block;
+        position: relative;
+
+        margin-bottom: 28px;
+        padding-top: 17px;
+        padding-bottom: 17px;
+        padding-left: 16px;
+        padding-right: 16px;
+
+        font-size: 20px;
+        line-height: 28px;
+        font-weight: 400;
+        text-align: left;
+        color: $nav-text;
+
+        background-color: $link-bg;
+
+        &::before {
+          position: absolute;
+          content: "";
+          width: 8px;
+          height: 8px;
+          background-color: transparent;
+          border-top: 2px solid rgba($black, 0.5);
+          border-right: 2px solid rgba($black, 0.5);
+          transform: rotate(45deg);
+          top: 24px;
+          right: 26px;
+        }
+      }
+    }
+
+    &--nojs {
+      .main-nav {
+        position: relative;
+      }
+
+      .main-nav__toggle--open {
+        display: none;
+      }
+
+      .page-header__logo-image {
+        position: absolute;
+        top: 25px;
+        left: 17px;
+        z-index: 1;
+      }
+    }
+
+    &--open {
+      .main-nav {
+        position: absolute;
+        background-color: $white;
+        z-index: 1;
+      }
+
+      .main-nav__toggle--close {
+        display: block;
+        z-index: 1;
+      }
+
+      .page-header__logo {
+        display: none;
+      }
+    }
+  }
+
+  .page-header__logo-image {
+    top: 25px;
+    left: 21px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .page-header__logo-image {
+    left: 17px;
   }
 }

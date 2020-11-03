@@ -42,25 +42,36 @@ img {
   clip: rect(0 0 0 0);
 }
 
-// .container {
-//   @include margin;
+.container {
+  @include margin;
 
-//   max-width: 1200px;
-//   padding-left: 10px;
-//   padding-right: 10px;
-// }
+  &--narrow {
+    max-width: 977px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 
-// @media (max-width: $tablet-width) {
-//   .container {
-//     width: 94%;
+  &--wide {
+    max-width: 1143px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
 
-//     &--noindent {
-//       width: 100%;
-//       padding-left: 0;
-//       padding-right: 0;
-//     }
-//   }
-// }
+@media (max-width: $tablet-width) {
+  .container {
+    &--narrow,
+    &--wide {
+      width: 91%;
+    }
+
+    &--noindent {
+      width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
 
 // @media (max-width: $mobile-width) {
 //   .container {
