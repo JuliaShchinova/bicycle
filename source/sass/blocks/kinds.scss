@@ -1,3 +1,11 @@
+.kinds {
+  background-color: $dark-white;
+}
+
+.kinds__title {
+  margin-top: 0;
+}
+
 .kinds__list {
   @include list-reset;
 }
