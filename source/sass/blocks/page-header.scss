@@ -113,11 +113,21 @@
         top: 25px;
         left: 17px;
         z-index: 1;
+
+        &:hover path,
+        &:focus path,
+        &:hover rect,
+        &:focus rect,
+        &:active path,
+        &:active rect {
+          fill: rgba($light-green, 0.3);
+        }
       }
     }
 
     &--open {
       .main-nav {
+        height: 100%;
         position: absolute;
         background-color: $white;
         z-index: 1;

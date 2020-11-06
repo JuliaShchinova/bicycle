@@ -1,11 +1,11 @@
 .advantages {
   padding-top: 150px;
   padding-bottom: 122px;
-}
 
-.advantages__title {
-  margin-top: 0;
-  margin-bottom: 50px;
+  h2 {
+    margin-top: 0;
+    margin-bottom: 50px;
+  }
 }
 
 .advantages__list {
@@ -52,10 +52,10 @@
   .advantages {
     padding-top: 21px;
     padding-bottom: 29px;
-  }
 
-  .advantages__title {
-    margin-bottom: 30px;
+    h2 {
+      margin-bottom: 30px;
+    }
   }
 
   .advantages__list {
@@ -72,14 +72,14 @@
 @media (max-width: $mobile-width) {
   .advantages {
     padding-bottom: 45px;
+
+    h2 {
+      margin-bottom: 32px;
+    }
   }
 
   .advantages__list {
     flex-direction: column;
-  }
-
-  .advantages__title {
-    margin-bottom: 32px;
   }
 
   .advantages__item {

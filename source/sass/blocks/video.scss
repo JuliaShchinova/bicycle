@@ -5,14 +5,22 @@
   background-image: linear-gradient(180deg, $video-bg, $video-bg 88%, $white 88%, $white 100%);
   background-repeat: no-repeat;
 
+  h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+
+    color: $white;
+  }
+
   img {
     display: block;
+
     @include margin;
 
     width: 929px;
     height: auto;
 
-    background-color: $nav-text;
+    background-color: $black;
   }
 
   button {
@@ -54,13 +62,6 @@
   }
 }
 
-.video__title {
-  margin-top: 0;
-  margin-bottom: 20px;
-
-  color: $white;
-}
-
 .video__description {
   @include margin;
   width: 340px;
@@ -76,6 +77,10 @@
     padding-top: 70px;
 
     background-image: linear-gradient(180deg, $video-bg, $video-bg 83%, $white 83%, $white 100%);
+
+    h2 {
+      line-height: 30px;
+    }
 
     img {
       width: 503px;
@@ -95,10 +100,6 @@
         left: 40px;
       }
     }
-  }
-
-  .video__title {
-    line-height: 30px;
   }
 
   .video__description {
