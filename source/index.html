@@ -6,13 +6,18 @@
   <title>Велосипеды</title>
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <link rel="preload" href="fonts/opensans-light-webfont.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="fonts/opensans-regular-webfont.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="fonts/opensans-bold-webfont.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="fonts/opensans-extrabold-webfont.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensans-light-webfont.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="fonts/opensans-regular-webfont.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="fonts/opensans-bold-webfont.woff2" as="font" type="font/woff2">
+  <link rel="preload" href="fonts/opensans-extrabold-webfont.woff2" as="font" type="font/woff2">
 </head>
 <body>
-  <header class="page-header page-header--nojs">
+
+  <div style="display: none;">
+    <include src="build/img/sprite_auto.svg"></include>
+  </div>
+
+  <header class="page-header page-header-js page-header--nojs">
     <div class="page-header__menu container container--narrow container--noindent">
       <a>
         <svg class="page-header__logo-image"  width="68" height="21" viewBox="0 0 68 21" fill="none" aria-label="Логотип Moon" xmlns="http://www.w3.org/2000/svg">
@@ -27,7 +32,7 @@
         </svg>
       </a>
       <nav class="page-header__nav main-nav">
-        <button class="main-nav__toggle main-nav__toggle--open" type="button">
+        <button class="main-nav__toggle main-nav__toggle--open toogle-js" type="button">
           <span class="visually-hidden">Меню</span>
         </button>
         <ul class="main-nav__list">
@@ -51,7 +56,7 @@
       <div class="page-header__information-container">
         <div class="page-header__information information">
           <h1>Мы продаем велосипеды</h1>
-          <p class="information__description">Наш магазин отбирает только самые лучшие велосипеды для продажи</p>
+          <p>Наш магазин отбирает только самые лучшие велосипеды для продажи</p>
         </div>
       </div>
 
@@ -87,6 +92,8 @@
               <source media="(max-width: 1023px)" srcset="img/roadbike-tablet@1x.webp 1x, img/roadbike-tablet@2x.webp 2x" type="image/webp">
               <source media="(min-width: 1024px)" srcset="img/roadbike-desktop@1x.webp 1x, img/roadbike-desktop@2x.webp 2x" type="image/webp">
               <source media="(max-width: 1023px)" srcset="img/roadbike-tablet@1x.jpg 1x, img/roadbike-tablet@2x.jpg 2x">
+
+              <!-- 1х: 342px; 2x: 684px -->
               <img src="img/roadbike-desktop@1x.jpg"  srcset="img/roadbike-desktop@2x.jpg 2x"  width="342" height="503" alt="Фотография дорожного велосипеда">
             </picture>
           </li>
@@ -97,6 +104,8 @@
               <source media="(max-width: 1023px)" srcset="img/mountainbike-tablet@1x.webp 1x, img/mountainbike-tablet@2x.webp 2x" type="image/webp">
               <source media="(min-width: 1024px)" srcset="img/mountainbike-desktop@1x.webp 1x, img/mountainbike-desktop@2x.webp 2x" type="image/webp">
               <source media="(max-width: 1023px)" srcset="img/mountainbike-tablet@1x.jpg 1x, img/mountainbike-tablet@2x.jpg 2x">
+
+              <!-- 1х: 342px; 2x: 684px -->
               <img src="img/mountainbike-desktop@1x.jpg"  srcset="img/mountainbike-desktop@2x.jpg 2x" width="342" height="566" alt="Фотография горного велосипеда">
             </picture>
           </li>
@@ -107,6 +116,8 @@
               <source media="(max-width: 1023px)" srcset="img/childbike-tablet@1x.webp 1x, img/childbike-tablet@2x.webp 2x" type="image/webp">
               <source media="(min-width: 1024px)" srcset="img/childbike-desktop@1x.webp 1x, img/childbike-desktop@2x.webp 2x" type="image/webp">
               <source media="(max-width: 1023px)" srcset="img/childbike-tablet@1x.jpg 1x, img/childbike-tablet@2x.jpg 2x">
+
+              <!-- 1х: 342px; 2x: 684px -->
               <img src="img/childbike-desktop@1x.jpg" srcset="img/childbike-desktop@2x.jpg 2x" width="342" height="513" alt="Фотография детского велосипеда">
             </picture>
           </li>
@@ -116,11 +127,11 @@
 
     <section class="page-main__video video" id="video">
       <h2>Видео про велосипеды</h2>
-      <p class="video__description">
-        В этом видео мы подробно расскажем про особенности выбора велосипеда для себя.
-      </p>
+      <p>В этом видео мы подробно расскажем про особенности выбора велосипеда для себя.</p>
       <picture>
         <source srcset="img/videobike-desktop@1x.webp 1x, img/videobike-desktop@2x.webp 2x" type="image/webp">
+
+        <!-- 1х: 929px; 2x: 1858px -->
         <img src="img/videobike-desktop@1x.jpg" srcset="img/videobike-desktop@2x.jpg 2x" width="929" height="522" alt="Видео о велосипедах">
       </picture>
 
@@ -139,14 +150,20 @@
   <footer class="page-footer container container--narrow">
     <ul class="page-footer__list">
       <li class="page-footer__item page-footer__item--mail">
+        <svg width="26" height="20">
+          <use xlink:href="#icon-mail"></use>
+        </svg>
         <a href="mailto:puteshestviemechta@gmail.ru">puteshestviemechta@gmail.ru</a>
       </li>
       <li class="page-footer__item page-footer__item--phone">
+        <svg width="22" height="24">
+          <use xlink:href="#icon-phone"></use>
+        </svg>
         <a href="tel:+749978468446">+7 (499) -784-684-46</a>
       </li>
     </ul>
   </footer>
 
-  <script src="js/script.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

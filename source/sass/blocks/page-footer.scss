@@ -12,12 +12,12 @@
 
 .page-footer__item {
   width: 50%;
+  display: flex;
+  justify-content: flex-end;
 
   a {
-    position: relative;
     display: block;
-    padding-right: 15px;
-    padding-left: 113px;
+    padding-left: 14px;
 
     line-height: 22px;
     font-weight: 400;
@@ -36,42 +36,14 @@
   }
 
   &--mail {
-    text-align: right;
-
     a {
-      &::before {
-        position: absolute;
-        content: "";
-
-        width: 26px;
-        height: 20px;
-
-        background-image: url("../img/mail.svg");
-        background-repeat: no-repeat;
-
-        top: 1px;
-        left: 197px;
-      }
+      padding-right: 15px;
     }
   }
 
   &--phone {
-    text-align: left;
-
     a {
-      &::before {
-        position: absolute;
-        content: "";
-
-        width: 19px;
-        height: 25px;
-
-        background-image: url("../img/phone.svg");
-        background-repeat: no-repeat;
-
-        top: -1px;
-        left: 76px;
-      }
+      padding-right: 214px;
     }
   }
 }
@@ -91,9 +63,15 @@
   .page-footer__item {
     &--mail {
       a {
-        &::before {
-          left: 70px;
-        }
+        padding-left: 16px;
+        padding-right: 11px;
+      }
+    }
+
+    &--phone {
+      a {
+        padding-left: 15px;
+        padding-right: 79px;
       }
     }
   }
@@ -106,38 +84,37 @@
   }
 
   .page-footer__list {
-    width: 90%;
+    width: auto;
     flex-direction: column;
   }
 
   .page-footer__item {
     width: 288px;
+    justify-content: flex-start;
 
     @include margin;
     padding-bottom: 24px;
 
     &--mail {
-      a {
-        padding-left: 45px;
+      svg {
+        margin-left: 12px;
+      }
 
-        &::before {
-          left: 5px;
-        }
+      a {
+        padding-left: 15px;
+        padding-right: 0;
       }
     }
 
     &--phone {
-      a {
-        padding-left: 72px;
-
-        &::before {
-          left: 35px;
-        }
+      svg {
+        margin-left: 43px;
       }
-    }
 
-    a {
-      text-align: left;
+      a {
+        padding-left: 14px;
+        padding-right: 0;
+      }
     }
   }
 }
