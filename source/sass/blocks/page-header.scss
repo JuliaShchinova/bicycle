@@ -28,15 +28,14 @@
   top: 318px;
   left: calc(50% - 440px);
 
-  &:hover path,
-  &:focus path,
-  &:hover rect,
-  &:focus rect {
+  fill: $light-green;
+
+  &:hover,
+  &:focus {
     fill: $white;
   }
 
-  &:active path,
-  &:active rect {
+  &:active {
     fill: rgba($light-green, 0.3);
   }
 }
@@ -114,12 +113,9 @@
         left: 17px;
         z-index: 1;
 
-        &:hover path,
-        &:focus path,
-        &:hover rect,
-        &:focus rect,
-        &:active path,
-        &:active rect {
+        &:hover,
+        &:focus,
+        &:active {
           fill: rgba($light-green, 0.3);
         }
       }
