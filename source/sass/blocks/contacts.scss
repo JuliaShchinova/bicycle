@@ -1,5 +1,5 @@
 .contacts {
-  padding-top: 152px;
+  padding-top: 154px;
   padding-bottom: 20px;
 
   h2 {
@@ -70,7 +70,7 @@
 
 @media (max-width: $mobile-width) {
   .contacts {
-    padding-top: 70px;
+    padding-top: 72px;
 
     h2 {
       margin-bottom: 20px;
@@ -89,7 +89,11 @@
       padding-left: 0;
       padding-right: 0;
 
-      background-size: cover;
+      background-image: url("../img/map-mobile@1x.jpg");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/map-mobile@2x.jpg");
+      }
     }
   }
 }

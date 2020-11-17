@@ -19,25 +19,12 @@
   padding-bottom: 215px;
 }
 
-.page-header__menu a {
-  cursor: pointer;
-}
-
 .page-header__logo-image {
   position: absolute;
   top: 318px;
   left: calc(50% - 440px);
 
   fill: $light-green;
-
-  &:hover,
-  &:focus {
-    fill: $white;
-  }
-
-  &:active {
-    fill: rgba($light-green, 0.3);
-  }
 }
 
 @media (max-width: $tablet-width) {
@@ -112,12 +99,6 @@
         top: 25px;
         left: 17px;
         z-index: 1;
-
-        &:hover,
-        &:focus,
-        &:active {
-          fill: rgba($light-green, 0.3);
-        }
       }
     }
 

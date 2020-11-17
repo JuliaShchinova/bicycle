@@ -5,6 +5,8 @@
 
 .page-footer__list {
   @include list-reset;
+  padding-left: 197px;
+  padding-right: 43px;
 
   display: flex;
   flex-wrap: wrap;
@@ -13,7 +15,6 @@
 .page-footer__item {
   width: 50%;
   display: flex;
-  justify-content: flex-end;
 
   a {
     display: block;
@@ -34,18 +35,6 @@
       opacity: 0.7;
     }
   }
-
-  &--mail {
-    a {
-      padding-right: 15px;
-    }
-  }
-
-  &--phone {
-    a {
-      padding-right: 214px;
-    }
-  }
 }
 
 @media (max-width: $tablet-width) {
@@ -56,22 +45,18 @@
 
   .page-footer__list {
     width: 698px;
+    padding-left: 0;
+    padding-right: 0;
 
     @include margin;
   }
 
   .page-footer__item {
-    &--mail {
-      a {
-        padding-left: 16px;
-        padding-right: 11px;
-      }
-    }
+    padding-left: 70px;
 
     &--phone {
-      a {
-        padding-left: 15px;
-        padding-right: 79px;
+      svg {
+        margin-left: 10px;
       }
     }
   }
@@ -79,7 +64,7 @@
 
 @media (max-width: $mobile-width) {
   .page-footer {
-    padding-top: 10px;
+    padding-top: 12px;
     padding-bottom: 0;
   }
 
@@ -94,26 +79,22 @@
 
     @include margin;
     padding-bottom: 24px;
+    padding-left: 0;
+
+    a {
+      padding-left: 15px;
+      padding-right: 0;
+    }
 
     &--mail {
       svg {
         margin-left: 12px;
-      }
-
-      a {
-        padding-left: 15px;
-        padding-right: 0;
       }
     }
 
     &--phone {
       svg {
         margin-left: 43px;
-      }
-
-      a {
-        padding-left: 14px;
-        padding-right: 0;
       }
     }
   }

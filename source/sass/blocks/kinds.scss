@@ -1,5 +1,5 @@
 .kinds {
-  padding-top: 150px;
+  padding-top: 151px;
   padding-bottom: 125px;
   background-color: $dark-white;
   overflow: hidden;
@@ -127,7 +127,7 @@
 
   .kinds__item {
     padding-top: 10px;
-    margin-bottom: 16px;
+    margin-bottom: 17px;
 
     &:nth-child(3n) {
       margin-left: auto;
@@ -174,7 +174,8 @@
 
 @media (max-width: $mobile-width) {
   .kinds {
-    padding-bottom: 23px;
+    padding-top: 53px;
+    padding-bottom: 20px;
   }
 
   .kinds__list {
@@ -184,7 +185,7 @@
   .kinds__item {
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 9px;
+    margin-bottom: 10px;
 
     &--road {
       &::before {
