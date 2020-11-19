@@ -22,6 +22,8 @@
   position: relative;
   display: flex;
   flex-direction: column-reverse;
+  margin-left: 10px;
+  margin-right: 10px;
 
   h3 {
     margin-top: 21px;
@@ -128,6 +130,8 @@
   .kinds__item {
     padding-top: 10px;
     margin-bottom: 17px;
+    margin-left: 0;
+    margin-right: 0;
 
     &:nth-child(3n) {
       margin-left: auto;
